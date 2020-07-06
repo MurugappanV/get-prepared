@@ -56,7 +56,7 @@ const useStyles = makeStyles({
 		"-webkit-background-clip": "text",
 		"-webkit-text-fill-color": "transparent",
 		fontWeight: "900",
-		fontSize: "40px",
+		fontSize: "2.5vw",
 		width: "max-content",
 		paddingBottom: "20px",
 	},
