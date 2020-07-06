@@ -460,10 +460,8 @@ function Quiz() {
 			"Question 2": question2,
 			"Question 3": question3,
 			"Question 4": question4,
-			"Question 5": question1,
-			"Question 6": question2,
 		},
-		count: 6,
+		count: 4,
 	});
 
 	const [selectedQues, setSelectedQues] = useState(1);

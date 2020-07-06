@@ -79,19 +79,19 @@ const text = {
 	suffix: "",
 };
 
-// {
-// 	questionName: "",
-// 	questionContent: undefined,
-// 	answerContent: undefined,
-// 	answerType: 2,
-// 	answerOptions: mcq,
-// 	correctAnswer: ["A"],
-// 	allowSteps: true,
-// }
+const q = {
+	questionName: "",
+	questionContent: undefined,
+	answerContent: undefined,
+	answerType: 2,
+	answerOptions: mcq,
+	correctAnswer: ["A"],
+	allowSteps: true,
+};
 
 function Question() {
 	const classes = useStyles();
-	const [question, setQuestion] = useState(question1);
+	const [question, setQuestion] = useState(q);
 
 	const onQuestionNameChange = useCallback((event) => {
 		const value = event?.target?.value;
@@ -188,6 +188,7 @@ function Question() {
 					<Editor
 						content={question.questionContent}
 						onContentChange={onQuestionChange}
+						placeholder={"Enter question here..."}
 					/>
 					<div className={classes.title}>
 						<span>Answer Type</span>
@@ -240,6 +241,7 @@ function Question() {
 					<Editor
 						content={question.answerContent}
 						onContentChange={onAnswerChange}
+						placeholder={"Enter answer explanation here..."}
 					/>
 					<Button
 						classes={{ root: classes.saveButton }}

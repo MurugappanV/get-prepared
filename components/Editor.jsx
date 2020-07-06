@@ -21,7 +21,7 @@ const defaultContent = {
 	blocks: [
 		{
 			key: "fsj00",
-			text: "Trial",
+			text: "",
 			type: "unstyled",
 			depth: 0,
 			inlineStyleRanges: [],
@@ -47,6 +47,7 @@ export default function Editor({
 	content = defaultContent,
 	onContentChange,
 	readOnly = false,
+	placeholder = "Enter the content here...",
 }) {
 	const classes = useStyles();
 
@@ -63,6 +64,7 @@ export default function Editor({
 
 	return (
 		<Dante
+			body_placeholder={placeholder}
 			content={readOnly ? content : editorContent.current}
 			continuousBlocks={blocks}
 			read_only={readOnly}
